@@ -1,0 +1,217 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFFF00, #FFFFFF);
+    display: block;
+}
+
+
+    .logo {
+        float: left;
+        margin-left: 46px;
+        padding: 0px 38px;
+        font-family: 'Raleway',sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 80px;
+        width: 100%;
+    }
+
+    .nav ul {
+        list-style: none;
+        cursor: pointer;
+        float: right;
+        margin-right: 140px;
+    }
+
+    .nav ul li {
+        list-style: none;
+        display: inline-block;
+        color: white;
+        font-family: 'Releway', sans-serif;
+        padding: 15px 15px;
+        font-weight: 400;
+    }
+
+    .nav ul li:hover {
+        border-bottom: 3px solid #000000;
+        transition: all .3s ease;
+    }
+
+    .header {
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(50% 50%);
+    }
+
+    .header h1 {
+        text-align: left;
+        color: black;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-size: 50px; 
+    }
+
+    .conten-header {
+        position: absolute;
+        transform: translate(-50% -50%);
+        text-align: center;
+        top: 55%;
+        left: 50%;
+    }
+
+    .conten-header p {
+        text-align: left;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px; 
+    }
+
+    .col-img {
+        position: absolute;
+        transform: translate(-50% -50%);
+        top: 25%;
+        left: 15%;
+    }
+
+    .col-img img {
+        width:70%;
+    }
+
+    .header1 {
+        text-align: center;
+        position: absolute;
+        top: 90%;
+        left: 10%;
+        transform: translate(50% 50%);
+    }
+
+    .header1 h1 b {
+        text-align: right;
+        color: black;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-size: 40px; 
+    }
+
+    .content-header1 {
+        position: absolute;
+        transform: translate(-50% -50%);
+        text-align: right;
+        top: 95%;
+        left: 7%;
+    }
+
+    .content-header1 p { 
+        text-align: right;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-size: 25px; 
+    }
+
+
+    .header2 {
+        /* Aktifkan CSS untuk .header2 */
+        text-align: right;
+        position: absolute;
+        top: 120%; /* Atur nilai top yang sesuai */
+        left: 5%;
+    }
+    
+    .header2 h1 b {
+        text-align: left;
+        color: black;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-size: 40px; 
+    }
+
+    .col-img1 {
+        position: relative;
+        transform: translate(50% 50%);
+        top: 130%;
+        left: 7%;
+        float: left;
+    }
+
+    .col-img1 img {
+        width: 50%; 
+    }
+
+    .header3 {
+        text-align: right;
+        position: absolute;
+        top: 170%; 
+        left: 7%;
+    }
+    
+    .header3 h1 b {
+        text-align: left;
+        color: black;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-size: 35px; 
+    }
+
+    .content-header3 {
+        position: absolute;
+        transform: translate(50% 50%);
+        text-align: left;
+        top: 180%;
+        left: 15%;
+    }
+
+    .content-header3 p { 
+        text-align: left;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-size: 25px; 
+    }
+
+    .contact-us {
+        text-align: center;
+        margin-top: 50px;
+        position: absolute;
+        bottom: 380%; /* Ubah nilai bottom sesuai kebutuhan */
+        width: 100%; /* Lebarkan elemen untuk mengisi lebar layar */
+    }
+    
+    .contact-us h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+    
+    .social-icons {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .social-icons li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .social-icons li img {
+        width: 70px;
+        height: 70px;
+    }
+    

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Inputan dan Tabel Nilai Mahasiswa</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+    }
+    table, th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Form Input Nilai Mahasiswa</h2>
+<form id="inputForm">
+    <label for="name">Nama:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="nim">NIM:</label><br>
+    <input type="text" id="nim" name="nim" required><br><br>
+    <label for="tugas">Total Nilai Tugas:</label><br>
+    <input type="number" id="tugas" name="tugas" min="0" required><br><br>
+    <label for="pbl">Total Nilai PBL:</label><br>
+    <input type="number" id="pbl" name="pbl" min="0" required><br><br>
+    <label for="uts">Nilai UTS:</label><br>
+    <input type="number" id="uts" name="uts" min="0" required><br><br>
+    <label for="uas">Nilai UAS:</label><br>
+    <input type="number" id="uas" name="uas" min="0" required><br><br>
+    <input type="button" value="Submit" onclick="submitForm()">
+</form>
+
+<h2>Output Tabel Nilai Mahasiswa</h2>
+<table id="outputTable">
+    <tr>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Nilai Tugas</th>
+        <th>Nilai PBL</th>
+        <th>Nilai UTS</th>
+        <th>Nilai UAS</th>
+        <th>Total Nilai</th>
+        <th>Kategori Nilai</th>
+    </tr>
+</table>
+
+<script>
+function submitForm() {
+    var form = document.getElementById("inputForm"); 
+    var name = form.elements["name"].value;
+    var nim = form.elements["nim"].value;
+    var tugas = parseFloat(form.elements["tugas"].value);
+    var pbl = parseFloat(form.elements["pbl"].value);
+    var uts = parseFloat(form.elements["uts"].value);
+    var uas = parseFloat(form.elements["uas"].value);
+
+    var totalNilai = (tugas * 0.05) + (pbl * 0.75) + (uts * 0.10) + (uas * 0.10);
+
+    var kategoriNilai;
+    if (totalNilai >= 80) {
+        kategoriNilai = 'A';
+    } else if (totalNilai >= 75 && totalNilai < 80) { 
+        kategoriNilai = 'B+';
+    } else if (totalNilai >= 70 && totalNilai < 75) {
+        kategoriNilai = 'B';
+    } else if (totalNilai >= 60 && totalNilai < 70) {
+        kategoriNilai = 'C+';
+    } else if (totalNilai >= 50 && totalNilai < 60) {
+        kategoriNilai = 'C';
+    } else if (totalNilai >= 40 && totalNilai < 50) {
+        kategoriNilai = 'D+';
+    } else {
+        kategoriNilai = 'E';
+    }
+
+    var table = document.getElementById("outputTable");
+    var newRow = table.insertRow(-1);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    var cell5 = newRow.insertCell(4);
+    var cell6 = newRow.insertCell(5);
+    var cell7 = newRow.insertCell(6);
+    var cell8 = newRow.insertCell(7);
+
+    cell1.innerHTML = name;
+    cell2.innerHTML = nim;
+    cell3.innerHTML = tugas;
+    cell4.innerHTML = pbl;
+    cell5.innerHTML = uts;
+    cell6.innerHTML = uas;
+    cell7.innerHTML = totalNilai.toFixed(2);
+    cell8.innerHTML = kategoriNilai;
+
+    form.reset();
+}
+</script>
+
+<a href="algologout.php">Kalo Capek Udahan Aja</a>
+</body>
+</html>
